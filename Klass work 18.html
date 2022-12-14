@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display:flex;
+            border: 5px solid firebrick;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .container > * {
+            flex-basis: 100%;
+            padding: 1rem;
+        }
+        .item {
+            background-color: aqua;
+        }
+        .item.first {
+            align-self: flex-end;
+        }
+        .item h1 {
+            color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .item p {
+            font-weight: bold;
+        }
+        .item.first h1 {
+            text-align: center;
+        }
+        .item.first p {
+            text-align: end;
+        }
+        .item.second {
+            background-color: greenyellow;
+            align-self: center;
+        }
+        .item.second h1 {
+            border: 5px solid blue;
+        }
+        .item.third {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item first">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="item second">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="item third">
+            <h1>Bigger Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Amet consectetur quo in, blanditiis hic vero.Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit.Amet consectetur quo in, blanditiis hic vero.</p>
+        </div>
+    </div>
+</body>
+</html>
