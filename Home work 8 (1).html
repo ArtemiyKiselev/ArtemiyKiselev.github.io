@@ -8,38 +8,56 @@
     <style>
         body {
             background-color: gray;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-            
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        body > * {
+            flex-basis: 100%;
+        }
+
+        p {
+            margin: 0;
+            flex-grow: 1;
         }
         .container {
             display: flex;
-            width: 100%;
             justify-content: space-between;
-            top: 0;
-            
-            
         }
+
         .item-2-1 {
             background-color: white;
         }
+
         .item-2-2 {
             background-color: red;
             color: white;
         }
-        .button {
+
+        img {
+            background-color: aqua;
+            display: inline-block;
+            height: 100%;
+        }
+        button {
             background-color: yellow;
+        }
+        .button-container, h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
     <h1>Название</h1>
     <div class="container">
-        <p class="item-1">
-            <th><img src="pic3.png"></th>
-        </p>
+        <div class="item-1">
+            <img src="pic3.png" width="200">
+        </div>
         <p class="item-2-1">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
             Suscipit adipisci quo odio sunt eius veritatis at quisquam 
@@ -52,10 +70,12 @@
             Suscipit adipisci quo odio sunt eius veritatis at quisquam 
             ad dolor.
         </p>
-        <p class="item-1">
-            <th><img src="pic4.png"></th>
-        </p>
+        <div class="item-1">
+            <img src="pic4.png" width="200">
+        </div>
     </div>
-    <button>Кнопка</button>
+    <div class="button-container">
+        <button>Кнопка</button>
+    </div>
 </body>
 </html>
